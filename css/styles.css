@@ -46,6 +46,22 @@ body {
   margin-right: auto;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 /* =========== COMPONENTS =========== */
 .modal-btn {
   /* width: 160px; */
@@ -73,6 +89,15 @@ body {
   background-color: var(--accent-color);
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .social-links-link {
   font-weight: 600;
   font-size: 11px;
@@ -92,6 +117,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .section-desc {
@@ -105,9 +131,17 @@ body {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.67;
+  line-height: 1.17;
   letter-spacing: 0.05em;
   /* color: #303030; */
+}
+
+.title-theme-dark {
+  margin-bottom: 44px;
+}
+
+.title-theme-light {
+  margin-bottom: 20px;
 }
 /* =========== END COMPONENTS =========== */
 
@@ -168,6 +202,24 @@ body {
 /* =========== END HEADER =========== */
 
 /* =========== HERO =========== */
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  width: 100px;
+}
+
+.hero-right-side {
+  flex-grow: 1;
+  padding-left: 100px;
+  padding-bottom: 206px;
+  padding-top: 272px;
+}
+
+.hero-section-desc {
+  max-width: 394px;
+}
 
 .hero-title {
   font-family: "Raleway", sans-serif;
@@ -175,21 +227,73 @@ body {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
   /* color: #ffffff; */
 }
 /* =========== END HERO =========== */
 
 /* ============== ABOUT ============== */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-left-side,
+.about-right-side {
+  width: calc(100% / 2 - 15px);
+}
+
+.about-right-side {
+  padding-left: 34px;
+}
+
+.about-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-section-desc {
+  margin-bottom: 20px;
+}
+
 .about-text {
+  max-width: 480px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 40px;
 }
 /* ============== END ABOUT ============== */
 
 /* ============== SERVICES ============== */
+.services-modal-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-list-wrapper {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.services-list {
+  width: 50%;
+  padding: 30px 40px;
+  border: 1px solid #000000;
+}
+
+.services-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .services-list-name,
 .services-list-price {
   font-weight: 400;
@@ -201,6 +305,39 @@ body {
 /* ============== END SERVICES ============== */
 
 /* ============== ADVANTAGES ============== */
+.advantages-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages-section-desc {
+  max-width: 470px;
+}
+
+.advantages-left-side,
+.advantages-right-side {
+  width: calc(100% / 2 - 15px);
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 370px;
+}
+
+.advantages-list-item {
+  width: 170px;
+  min-height: 134px;
+  padding: 20px;
+  border: 1px solid #000000;
+}
+
+.advantages-list-item:nth-child(odd) {
+  margin-bottom: 30px;
+}
+
 .advantages-list-count {
   font-weight: 700;
   font-size: 42px;
@@ -208,6 +345,7 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  margin-bottom: 6px;
 }
 
 .advantages-list-desc {
@@ -220,6 +358,34 @@ body {
 /* ============== END ADVANTAGES ============== */
 
 /* ============== MASTERS ============== */
+.masters-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .masters-list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.masters-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} */
+
+.masters-list {
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.masters-list-item {
+  width: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.masters-list-content {
+  padding-top: 30px;
+}
+
 .masters-list-name {
   font-weight: 400;
   font-size: 18px;
@@ -227,6 +393,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
 }
 
 .masters-list-position {
@@ -240,7 +407,22 @@ body {
 /* ============== END MASTERS ============== */
 
 /* ============== GALLERY ============== */
+.gallery-suptitle {
+  margin-bottom: 44px;
+}
 
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.gallery-list-item {
+  width: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
 /* ============== END GALLERY ============== */
 
 /* ============== CONTACT FORM ============== */
@@ -266,6 +448,17 @@ body {
 /* ============== END CONTACT INFORMATION ============== */
 
 /* ============== FOOTER ============== */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .copyright {
   font-size: 11px;
   font-weight: 600;
