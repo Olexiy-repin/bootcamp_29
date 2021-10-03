@@ -64,8 +64,7 @@ body {
 
 /* =========== COMPONENTS =========== */
 .modal-btn {
-  /* width: 160px; */
-  /* height: 40px; */
+  min-width: 160px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
@@ -87,6 +86,10 @@ body {
 .modal-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+}
+
+.modal-btn-theme-dark {
+  color: #ffffff;
 }
 
 .social-links {
@@ -164,6 +167,14 @@ body {
   letter-spacing: 0.02em;
 }
 
+.section-desc-theme-light {
+  color: #555555;
+}
+
+.section-desc-theme-dark {
+  color: #9da4bd;
+}
+
 .title {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -175,10 +186,12 @@ body {
 
 .title-theme-dark {
   margin-bottom: 44px;
+  color: #ffffff;
 }
 
 .title-theme-light {
   margin-bottom: 20px;
+  color: #303030;
 }
 /* =========== END COMPONENTS =========== */
 
@@ -312,6 +325,12 @@ body {
 /* ============== END ABOUT ============== */
 
 /* ============== SERVICES ============== */
+.services {
+  background-image: url("../images/services/bg.png");
+  background-size: cover;
+  background-color: #111319;
+}
+
 .services-modal-btn {
   display: block;
   margin-left: auto;
@@ -326,7 +345,22 @@ body {
 .services-list {
   width: 50%;
   padding: 30px 40px;
-  border: 1px solid #000000;
+}
+
+.services-list:first-child {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.services-list:last-child {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .services-list-item {
@@ -375,7 +409,7 @@ body {
   width: 170px;
   min-height: 134px;
   padding: 20px;
-  border: 1px solid #000000;
+  background-color: #f7f7f7;
 }
 
 .advantages-list-item:nth-child(odd) {
