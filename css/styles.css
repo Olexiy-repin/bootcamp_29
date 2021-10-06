@@ -386,11 +386,25 @@ body {
 
 .services-list-item {
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+}
+
+.services-list-item::before {
+  display: block;
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: rgba(157, 164, 189, 0.12);
 }
 
 .services-list-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.services-list-name {
+  order: -1;
 }
 
 .services-list-name,
@@ -688,6 +702,14 @@ body {
   border-color: var(--accent-color);
 }
 
+.modal-form-input:focus:not(:placeholder-shown):invalid {
+  border: 1px dashed red;
+}
+
+.modal-form-input:focus:not(:placeholder-shown):valid {
+  border: 1px dashed green;
+}
+
 .modal-form-icon {
   position: absolute;
   left: 12px;
@@ -727,6 +749,7 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  margin-right: 10px;
   border: 1px solid #303030;
 }
 
@@ -737,4 +760,46 @@ body {
 
 .modal-form-check:focus + .modal-form-check-label::before {
   outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.modal-form-check-label {
+  display: flex;
+  align-items: center;
+}
+
+.checbox-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.modal-form-check {
+  bottom: 0;
+  left: 20px;
+}
+
+.modal-form-btn {
+  min-width: 160px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 250ms linear, background-color 250ms linear;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
 }
