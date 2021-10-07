@@ -1,0 +1,32 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-left-side,
+.about-right-side {
+  width: calc(100% / 2 - 15px);
+}
+
+.about-right-side {
+  padding-left: 34px;
+}
+
+.about-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-section-desc {
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 480px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 40px;
+}
