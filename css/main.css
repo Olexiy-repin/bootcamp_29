@@ -16,6 +16,11 @@
   overflow: hidden;
 }
 
+.social-links, .nav {
+  display: flex;
+  align-items: center;
+}
+
 h1,
 h2,
 h3,
@@ -71,8 +76,8 @@ body {
   padding-right: 20px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
-  font-weight: 600;
   font-size: 12px;
+  font-weight: 600;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -81,19 +86,13 @@ body {
   transition: color 250ms linear, background-color 250ms linear;
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-btn:hover, .modal-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
 }
 
 .modal-btn-theme-dark {
   color: #ffffff;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
 }
 
 .social-links::before {
@@ -118,8 +117,7 @@ body {
   transition: color 250ms linear;
 }
 
-.social-links-link:hover,
-.social-links-link:focus {
+.social-links-link:hover, .social-links-link:focus {
   color: var(--accent-color);
 }
 
@@ -160,8 +158,8 @@ body {
 }
 
 .section-desc {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
@@ -209,14 +207,13 @@ body {
   transition: background-color 250ms linear;
 }
 
+.social-list-link:hover, .social-list-link:focus {
+  background-color: #000000;
+}
+
 .social-list-icon {
   fill: #303030;
   transition: fill 250ms linear;
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: #000000;
 }
 
 .social-list-link:hover .social-list-icon,
@@ -345,6 +342,11 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.modal-form-check-label {
+  display: flex;
+  align-items: center;
+}
+
 .modal-form-check-label::before {
   display: block;
   content: "";
@@ -362,11 +364,6 @@ body {
 
 .modal-form-check:focus + .modal-form-check-label::before {
   outline: 2px solid rgba(0, 0, 255, 0.5);
-}
-
-.modal-form-check-label {
-  display: flex;
-  align-items: center;
 }
 
 .checbox-wrapper {
@@ -399,8 +396,7 @@ body {
   align-self: center;
 }
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
+.modal-form-btn:hover, .modal-form-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
 }
@@ -418,18 +414,12 @@ body {
   align-items: center;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
 .logo {
   margin-right: 70px;
   animation-play-state: paused;
 }
 
-.logo:hover,
-.logo:focus {
+.logo:hover, .logo:focus {
   animation-play-state: running;
 }
 
@@ -450,8 +440,7 @@ body {
   transition: color 250ms linear;
 }
 
-.menu-link:hover,
-.menu-link:focus {
+.menu-link:hover, .menu-link:focus {
   color: var(--accent-color);
 }
 
@@ -466,8 +455,7 @@ body {
   transition: color 250ms linear;
 }
 
-.tel-link:hover,
-.tel-link:focus {
+.tel-link:hover, .tel-link:focus {
   color: var(--accent-color);
 }
 

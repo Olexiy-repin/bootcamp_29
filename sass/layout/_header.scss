@@ -12,18 +12,17 @@
 }
 
 .nav {
-  display: flex;
-  align-items: center;
+  @extend %align-list;
 }
 
 .logo {
   margin-right: 70px;
   animation-play-state: paused;
-}
 
-.logo:hover,
-.logo:focus {
-  animation-play-state: running;
+  &:hover,
+  &:focus {
+    animation-play-state: running;
+  }
 }
 
 .menu {
@@ -41,11 +40,11 @@
   letter-spacing: 0.1em;
   color: #ffffff;
   transition: color 250ms linear;
-}
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .tel-link {
@@ -57,9 +56,9 @@
   margin-right: 40px;
   color: #ffffff;
   transition: color 250ms linear;
-}
 
-.tel-link:hover,
-.tel-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
