@@ -1,0 +1,137 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-head {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-form-field + .modal-form-field {
+  margin-top: 10px;
+}
+
+.modal-form-field-content {
+  display: block;
+  position: relative;
+  margin-top: 6px;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #303030;
+  padding-left: 42px;
+  transition: border-color 250ms linear;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  &:focus:not(:placeholder-shown):invalid {
+    border: 1px dashed red;
+  }
+
+  &:focus:not(:placeholder-shown):valid {
+    border: 1px dashed green;
+  }
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: teal;
+  transition: background-color 250ms linear;
+
+  .modal-form-input:focus + & {
+    background-color: var(--accent-color);
+  }
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  margin-top: 6px;
+  padding: 15px;
+  transition: border-color 250ms linear;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-form-check-label {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid #303030;
+
+    .modal-form-check:checked + & {
+      background-color: var(--accent-color);
+      box-shadow: inset 0 0 0 5px #ffffff;
+    }
+
+    .modal-form-check:focus + & {
+      outline: 2px solid rgba(0, 0, 255, 0.5);
+    }
+  }
+}
+
+.checbox-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.modal-form-check {
+  bottom: 0;
+  left: 20px;
+}
+
+.modal-form-btn {
+  min-width: 160px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 250ms linear, background-color 250ms linear;
+  margin-top: 20px;
+  align-self: center;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: var(--accent-color);
+  }
+}
