@@ -2,26 +2,26 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbershop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
 <body>
     <!-- HEADER -->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header-container">
             <nav class="nav">
                 <a class="logo animate__animated animate__swing animate__fast animate__repeat-2" href="./">
@@ -44,10 +44,41 @@
                     </li>
                 </ul>
             </nav>
+            <button class="open-menu-btn" data-menu-open>
+                <svg class="open-menu-icon" width="40" height="40">
+                    <use href="./images/sprite.svg#burger-icon"></use>
+                </svg>
+            </button>
             <a class="tel-link link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button class="modal-btn modal-btn-theme-dark" type="button" data-modal-open>онлайн-запись</button>
+            <button class="modal-btn modal-btn-theme-dark header-modal-btn" type="button"
+                data-modal-open>онлайн-запись</button>
         </div>
-    </header> -->
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu-container">
+                <button class="mobile-menu-close-btn" data-menu-close>
+                    <svg class="mobile-menu-close-icon" width="40" height="40">
+                        <use href="./images/sprite.svg#close-icon"></use>
+                    </svg>
+                </button>
+                <nav class="mobile-menu-nav">
+                    <ul class="mobile-menu-list list">
+                        <li class="mobile-menu-list-item">
+                            <a href="#" class="mobile-menu-list-link link">О нас</a>
+                        </li>
+                        <li class="mobile-menu-list-item">
+                            <a href="#" class="mobile-menu-list-link link">Услуги и цены</a>
+                        </li>
+                        <li class="mobile-menu-list-item">
+                            <a href="#" class="mobile-menu-list-link link">Мастера</a>
+                        </li>
+                        <li class="mobile-menu-list-item">
+                            <a href="#" class="mobile-menu-list-link link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <main>
         <!-- HERO -->
         <!-- <section class="hero">
@@ -80,31 +111,58 @@
                     <ul class="about-list list">
                         <li class="about-list-item">
                             <picture>
-                                <source srcset="./images/about/about-img-desktop-1.jpg" media="(min-width: 1200px)">
-                                <source srcset="./images/about/about-img-tablet-1.jpg" media="(min-width: 768px)">
-                                <img class="about-list-img" src="#" alt="мастер бреет бороду клиенту">
+                                <source
+                                    srcset="./images/about/about-img-desktop-1.webp 1x, ./images/about/about-img-desktop-1@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp" />
+                                <source
+                                    srcset="./images/about/about-img-desktop-1.jpg 1x, ./images/about/about-img-desktop-1@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="./images/about/about-img-tablet-1.webp 1x, ./images/about/about-img-tablet-1@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp" />
+                                <source
+                                    srcset="./images/about/about-img-tablet-1.jpg 1x, ./images/about/about-img-tablet-1@2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+                                <img class="about-list-img" src="#" alt="мастер бреет бороду клиенту" />
                             </picture>
                         </li>
                         <li class="about-list-item">
                             <picture>
-                                <source srcset="./images/about/about-img-desktop-2.jpg" media="(min-width: 1200px)">
-                                <source srcset="./images/about/about-img-tablet-2.jpg" media="(min-width: 768px)">
-                                <img class="about-list-img" src="#" alt="мастер стрижет клиента">
-                            </picture>
+                                <source
+                                    srcset="./images/about/about-img-desktop-2.webp 1x, ./images/about/about-img-desktop-2@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp" />
+                                <source
+                                    srcset="./images/about/about-img-desktop-2.jpg 1x, ./images/about/about-img-desktop-2@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
 
+                                <source
+                                    srcset="./images/about/about-img-tablet-2.webp 1x, ./images/about/about-img-tablet-2@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp" />
+                                <source
+                                    srcset="./images/about/about-img-tablet-2.jpg 1x, ./images/about/about-img-tablet-2@2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+                                <img class="about-list-img" src="#" alt="мастер стрижет клиента" />
+                            </picture>
                         </li>
                     </ul>
                 </div>
                 <div class="about-right-side">
                     <h2 class="suptitle suptitle-theme-light">О НАС</h2>
-                    <h3 class="title title-theme-light about-title">Лучший Барбершоп твоего города</h3>
-                    <p class="section-desc about-section-desc section-desc-theme-light">Если ты хочешь добавить в свой
-                        образ больше уверенности –
-                        тебе точно к нам.</p>
-                    <p class="about-text">Мы команда, которая никогда не останавливается на достигнутом
-                        и жаждет перемен. И когда ты попадешь в руки нашего мастера,
-                        то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне".
-                        Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
+                    <h3 class="title title-theme-light about-title">
+                        Лучший Барбершоп твоего города
+                    </h3>
+                    <p class="section-desc about-section-desc section-desc-theme-light">
+                        Если ты хочешь добавить в свой образ больше уверенности – тебе
+                        точно к нам.
+                    </p>
+                    <p class="about-text">
+                        Мы команда, которая никогда не останавливается на достигнутом и
+                        жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
+                        никогда не сможешь быть прежним. Мы команда, которая всегда с
+                        клиентами "на одной волне". Поэтому, мы всегда готовы
+                        усовершенствовать каждого, кто к нам приходит!
+                    </p>
                     <button class="modal-btn" type="button">онлайн-запись</button>
                 </div>
             </div>
@@ -392,7 +450,7 @@
         </div>
     </footer> -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>X</button>
             <form action="#" class="modal-form">
@@ -427,9 +485,10 @@
                 <button type="submit" class="modal-form-btn">Отправить</button>
             </form>
         </div>
-    </div> -->
+    </div>
 
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
